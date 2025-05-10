@@ -22,7 +22,7 @@ This project transforms a Raspberry Pi into a WiFi access point with proxy capab
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/rpi-ap-proxy.git
+   git clone https://github.com/svobodacenter/rpi-ap-proxy.git
    cd rpi-ap-proxy
    ```
 
