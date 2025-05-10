@@ -284,7 +284,8 @@ main() {
     
     echo "Setup complete! Your Raspberry Pi is now configured as a WiFi access point with SOCKS5 proxy."
     if [ "$USE_XRAY" = true ]; then
-        echo "Add your outbounds to the xray config file: /usr/local/etc/xray/config.json (or put your own config there with the socks inbound)"
+        echo "1. Add your outbounds to the xray config file: /usr/local/etc/xray/config.json (or put your own config there with the socks inbound)"
+        echo "2. Restart xray: systemctl restart xray"
     else
         echo "Using external SOCKS5 proxy: $SOCKS5_PROXY"
     fi
