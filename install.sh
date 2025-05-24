@@ -197,13 +197,13 @@ EOF
 install_dnscrypt() {
     echo "Installing DNSCrypt-proxy..."
     
-    # Check if install-dnscrypt-rpi.sh exists
-    if [ ! -f "install-dnscrypt-rpi.sh" ]; then
-        wget https://raw.githubusercontent.com/svobodacenter/rpi-ap-proxy/master/install-dnscrypt-rpi.sh
+    # Check if install-dnscrypt.sh exists
+    if [ ! -f "install-dnscrypt.sh" ]; then
+        wget https://raw.githubusercontent.com/svobodacenter/rpi-ap-proxy/master/install-dnscrypt.sh
     fi
     
-    chmod +x install-dnscrypt-rpi.sh
-    ./install-dnscrypt-rpi.sh
+    chmod +x install-dnscrypt.sh
+    ./install-dnscrypt.sh
 
     # Configure resolv.conf
     cat > /etc/resolv.conf <<EOF

@@ -28,7 +28,7 @@ This project transforms a Raspberry Pi into a WiFi access point with proxy capab
 
 2. Make the installation scripts executable:
    ```bash
-   chmod +x install.sh install-dnscrypt-rpi.sh
+   chmod +x install.sh install-dnscrypt.sh
    ```
 
 3. Run the installation script as root:
