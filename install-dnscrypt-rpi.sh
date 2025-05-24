@@ -24,6 +24,7 @@ install_dnscrypt_proxy() {
     wget https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/"$dnscrypt_proxy_version"/dnscrypt-proxy-linux_"$ARCH"-"$dnscrypt_proxy_version".tar.gz -O /tmp/dnscrypt-proxy.tar.gz
     tar -xzvf /tmp/dnscrypt-proxy.tar.gz -C /tmp
     mv /tmp/linux-$ARCH/dnscrypt-proxy /usr/sbin/dnscrypt-proxy
+    chmod +x /usr/sbin/dnscrypt-proxy
     rm /tmp/linux-$ARCH -r
 
     useradd -r -s /usr/sbin/nologin _dnscrypt-proxy
