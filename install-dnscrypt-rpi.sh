@@ -8,6 +8,8 @@ fi
 
 if [ "$(uname -m)" = "aarch64" ]; then
     ARCH="arm64"
+elif [ "$(uname -m)" = "x86_64" ]; then
+    ARCH="x86_64"
 else
     ARCH="arm"
 fi
