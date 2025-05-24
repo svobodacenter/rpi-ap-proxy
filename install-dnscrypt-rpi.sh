@@ -30,7 +30,13 @@ install_dnscrypt_proxy() {
     useradd -r -s /usr/sbin/nologin _dnscrypt-proxy
     groupadd _dnscrypt-proxy -U _dnscrypt-proxy
     mkdir -p /etc/dnscrypt-proxy/
-    cp dnscrypt-proxy.toml $DNSCRYPT_PROXY_CONF
+
+    # Are we in standalone mode?
+    if [ -f dnscrypt-proxy.toml ]; then
+        cp dnscrypt-proxy.toml $DNSCRYPT_PROXY_CONF
+    else
+        wget https://raw.githubusercontent.com/svobodacenter/rpi-ap-proxy/refs/heads/master/dnscrypt-proxy.toml -O $DNSCRYPT_PROXY_CONF
+    fi
 
     cat <<EOF > /etc/systemd/system/dnscrypt-proxy.service
 [Unit]
